@@ -1,6 +1,7 @@
 <div class="post_wrapper">
   <% @posts.each do |post| %>
    <h2 class="title"><%= link_to post.title , post %></h2>
+   <P class="body"><%= truncate(post.body, length:100) %></P>
    <p class="date"><%= time_ago_in_words(post.created_at) %></p>
   <% end %>
 </div>
